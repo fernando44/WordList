@@ -8,7 +8,7 @@ int main(void)
   int cont = 0;
   
   //abrindo o arquivo
-  Arq = fopen("multi_99999_999999.txt", "a");
+  Arq = fopen("wl.txt", "a");
   for (cont = 100000; cont <= 999999; ++cont)
   {
     sprintf(str, "%d", cont); 
