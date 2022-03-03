@@ -2,28 +2,20 @@
 #include <stdlib.h>
 int main(void)
 {
-  // criando a variável ponteiro para o arquivo
-  FILE *Arq;
+  
+  FILE *Arq;// variável para o arquivo
   char str[50];
-  int i = 0;
+  int cont = 0;
   
   //abrindo o arquivo
   Arq = fopen("multi_99999_999999.txt", "a");
-  printf("arquivo criado\n");
-  printf("iniciando gravacao\n");
-  for (i = 100000; i <= 999999; ++i)
+  for (cont = 100000; cont <= 999999; ++cont)
   {
-    sprintf(str, "%d", i); 
+    sprintf(str, "%d", cont); 
     fputs( str ,Arq);
     fputs("\n",Arq);
   }
-  printf("finalizando gravacao\n");
-  
-  // fechando arquivo
-  fclose(Arq);
-  printf("arquivo fechado\n");
-  //mensagem para o usuário
-  printf("O arquivo foi criado com sucesso!\n");
+  fclose(Arq);// fechando arquivo
   
   return(0);
 }
